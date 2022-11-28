@@ -1,0 +1,21 @@
+page,
+view,
+text,
+label,
+image,
+button,
+input,
+radio,
+switch,
+checkbox,
+navigator,
+icon {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+page {
+  min-height: 100%;
+  font-size: 14px;
+}

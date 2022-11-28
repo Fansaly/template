@@ -1,0 +1,10 @@
+**/node_modules/**
+**/uni_modules/**
+**/wxcomponents/**
+**/unpackage/**
+**/build/**
+**/dist/**
+**/dist-ssr/**
+**/dev-dist/**
+**/*-sw.js
+**/workbox-*.js
