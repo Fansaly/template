@@ -1,0 +1,17 @@
+**/node_modules/**
+**/uni_modules/**
+**/wxcomponents/**
+**/unpackage/**
+**/build/**
+**/dist/**
+**/dist-ssr/**
+**/dev-dist/**
+**/*-sw.js
+**/workbox-*.js
+
+# uni-app template initial files
+babel.config.js
+jsconfig.json
+postcss.config.js
+sfc.d.ts
+shime-vue.d.ts
