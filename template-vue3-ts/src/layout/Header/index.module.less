@@ -1,0 +1,35 @@
+@import '@/layout/styles/variables.less';
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-right: @distance-main;
+  width: 100%;
+  height: @header-height;
+  color: @white;
+  background-color: @layout-header-background;
+  box-shadow: 0 2px 8px rgba(114,138,168,.12);
+  &.fixed-header {
+    position: fixed;
+    z-index: @header-zindex;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    padding-left: @distance-main;
+    min-width: @sidebar-width;
+    color: #fff;
+    font-size: 18px;
+    .icon {
+      width: 2.2em;
+      height: 2.2em;
+      fill: currentColor;
+    }
+    .text {
+      margin-left: 8px;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import '@/layout/styles/variables.less';
+
+#app {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 100%;
+  background-color: @body-background;
+}
+
+.app-container {
+  flex: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  max-width: 100%;
+  transition: margin @animation-content-expanded;
+  &.fixed-header {
+    margin-top: @header-height;
+    margin-left: @sidebar-width;
+  }
+  &.sidebar-collapsed {
+    margin-left: @sidebar-width-collapsed;
+    transition: margin @animation-content-collapsed;
+  }
+  .app-content {
+    flex: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding-left: @distance-main;
+    padding-right: @distance-main;
+    min-width: 640px + 2 * @distance-main;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: @body-background;
+    transition: padding-bottom @animation-common-linear;
+    > div:not(.no-margin-top) {
+      margin-top: @distance-main;
+    }
+    .page-container {
+      flex: 1;
+      max-width: 100%;
+      overflow-x: auto;
+      >.ant-card-body {
+        min-height: 100%;
+      }
+    }
+    .fill-app-content {
+      margin-left: -@distance-main;
+      margin-right: -@distance-main;
+    }
+  }
+}
