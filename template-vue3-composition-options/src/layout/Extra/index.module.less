@@ -1,0 +1,14 @@
+@import '@/layout/styles/variables.less';
+
+.breadcrumb {
+  :global .ant-breadcrumb {
+    .link-item {
+      .ant-breadcrumb-link {
+        cursor: pointer;
+        &:hover {
+          color: @primary-color;
+        }
+      }
+    }
+  }
+}

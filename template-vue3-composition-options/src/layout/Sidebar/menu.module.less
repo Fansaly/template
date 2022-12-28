@@ -1,0 +1,97 @@
+@import '@/layout/styles/variables.less';
+
+.menu-container :global .ant-menu {
+  border: none;
+  // &.ant-menu-root {
+  //   padding: 0 10px;
+  // }
+  .ant-menu-item,
+  .ant-menu-submenu-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: @sidebar-menu-item-height;
+    line-height: @sidebar-menu-item-height;
+    font-size: @sidebar-menu-item-font-size;
+    font-weight: 400;
+    .anticon {
+      display: inline-flex;
+      margin-right: 12px;
+      min-width: auto;
+      font-size: 16px;
+    }
+  }
+  // .ant-menu-item::after {
+  //   left: 0;
+  //   right: auto;
+  // }
+  .ant-menu-item-selected {
+    background-color: #eaf1ff;
+  }
+}
+
+@rootmenu-padding: 24px;
+@submenu-padding: @rootmenu-padding + 2px;
+
+.menu-container :global .ant-menu.ant-menu-inline {
+  width: 100%;
+  .ant-menu-item,
+  .ant-menu-submenu-title {
+    width: 100%;
+  }
+  .ant-menu-submenu-title {
+    padding-right: @submenu-padding + 8px !important;
+  }
+  > .ant-menu-item {
+    padding-left: @rootmenu-padding !important;
+  }
+  .ant-menu-submenu.ant-menu-submenu-inline {
+    &.submenu-1 {
+      > .ant-menu-submenu-title {
+        padding-left: 1 * @rootmenu-padding !important;
+      }
+      > .ant-menu > .ant-menu-item {
+        padding-left: 2 * @submenu-padding !important;
+      }
+    }
+    &.submenu-2 {
+      > .ant-menu-submenu-title {
+        padding-left: 2 * @submenu-padding !important;
+      }
+      > .ant-menu > .ant-menu-item {
+        padding-left: 3 * @submenu-padding !important;
+      }
+    }
+    &.submenu-3 {
+      > .ant-menu-submenu-title {
+        padding-left: 3 * @submenu-padding !important;
+      }
+      > .ant-menu-item {
+        padding-left: 4 * @submenu-padding !important;
+      }
+    }
+    &.submenu-4 {
+      > .ant-menu-submenu-title {
+        padding-left: 4 * @submenu-padding !important;
+      }
+      > .ant-menu-item {
+        padding-left: 5 * @submenu-padding !important;
+      }
+    }
+  }
+}
+
+.menu-container :global .ant-menu.ant-menu-inline-collapsed {
+  .ant-menu-item,
+  .ant-menu-submenu-title {
+    .anticon {
+      margin-right: 0;
+    }
+  }
+  >.ant-menu-item,
+  >.ant-menu-submenu > .ant-menu-submenu-title,
+  >.ant-menu-submenu.ant-menu-submenu-inline > .ant-menu-submenu-title {
+    padding-left: @rootmenu-padding + 4px !important;
+    padding-right: 0 !important;
+    width: 100%;
+  }
+}

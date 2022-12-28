@@ -1,0 +1,133 @@
+@import '@/layout/styles/variables.less';
+
+.wrapper {
+  position: relative;
+  color: #000B24;
+  .header {
+    margin-bottom: 28px;
+    font-size: 22px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    .logo {
+      margin-right: 8px;
+      width: 36px;
+      height: 36px;
+    }
+    .title {
+      font-weight: 800;
+    }
+  }
+
+  .tabs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    :global .ant-divider {
+      top: auto;
+      margin: 0 20px;
+      height: 12px;
+      background-color: #dadde3;
+    }
+    .item {
+      padding: 4px 0 10px 0;
+      color: #000f32;
+      font-size: 14px;
+      border: none;
+      &.current {
+        color: @primary-color;
+      }
+    }
+  }
+
+  :global .ant-form-item {
+    display: block;
+    &.ant-form-item-with-help {
+      margin-bottom: 3px;
+    }
+    .ant-form-item-control {
+      line-height: inherit;
+      .code-input {
+        top: 0;
+      }
+    }
+    .ant-input-affix-wrapper-lg,
+    .ant-input-lg {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .ant-input-affix-wrapper .ant-input {
+      padding: 0;
+    }
+    .ant-input-affix-wrapper {
+      .ant-input-prefix {
+        margin-right: 10px;
+      }
+      .ant-input-suffix {
+        margin-left: 10px;
+      }
+    }
+    .ant-form-explain {
+      margin-top: 3px;
+    }
+    .ant-input-affix-wrapper,
+    .ant-input {
+      border-radius: 5px;
+    }
+  }
+  :global(.ant-form-item) {
+    .code-input {
+      position: relative;
+      :global .ant-input {
+        padding-right: 104px;
+      }
+      :global .ant-input-group-addon {
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        height: 100%;
+        width: auto;
+        border: none;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .extra {
+    margin-top: 12px;
+    justify-content: space-between;
+    font-size: 13px;
+    color: rgba(45,65,92,0.8);
+    .rules {
+      font-size: 13px;
+      color: rgba(45,65,92,0.8);
+    }
+    .type-link {
+      &.forgot {
+        color: #8295b6;
+      }
+    }
+  }
+
+  .submit {
+    border-radius: 5px;
+    &[disabled] {
+      background-color: #bfd4fc;
+      border-color: #bfd4fc;
+      color: #fff;
+    }
+  }
+
+  &.signup {
+    .extra {
+      margin-top: 16px;
+      :global .ant-checkbox + span {
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+    }
+  }
+}

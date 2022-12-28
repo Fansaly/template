@@ -1,0 +1,45 @@
+@import '@/layout/styles/variables.less';
+
+.ant-menu {
+  .ant-menu-item {
+    .ant-menu-title-content {
+      > a {
+        color: @menu-item-color;
+      }
+    }
+    &:hover,
+    &.ant-menu-item-selected {
+      .ant-menu-title-content {
+        > a {
+          color: @menu-highlight-color;
+        }
+      }
+    }
+  }
+  .ant-menu-submenu {
+    .ant-menu-submenu-title {
+      .ant-menu-title-content {
+        > a {
+          color: @menu-item-color;
+        }
+      }
+    }
+    &:hover,
+    &.ant-menu-submenu-selected,
+    &.should-selected:not(.ant-menu-submenu-selected) {
+      .ant-menu-submenu-title {
+        .ant-menu-title-content {
+          > a {
+            color: @menu-highlight-color;
+          }
+        }
+      }
+    }
+    &.should-selected:not(.ant-menu-submenu-selected) {
+      color: @menu-highlight-color;
+      &:after {
+        border-bottom: 2px solid @primary-color;
+      }
+    }
+  }
+}

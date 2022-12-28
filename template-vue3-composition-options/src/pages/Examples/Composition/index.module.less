@@ -1,0 +1,33 @@
+.page {
+  .text {
+    margin-bottom: 10px;
+    .color {
+      margin-left: 6px;
+      color: orange;
+      &:global(.disabled) {
+        color: gray;
+      }
+    }
+  }
+  :global .box {
+    position: relative;
+    margin-top: 22px;
+    padding: 4px 10px;
+    border: 1px solid #333;
+    border-radius: 2px;
+    .label {
+      position: absolute;
+      top: -14px;
+      left: 6px;
+      padding: 0 4px;
+      background-color: #fff;
+    }
+    .count {
+      margin-top: 6px;
+    }
+    .btn {
+      margin-left: 12px;
+      cursor: pointer;
+    }
+  }
+}
