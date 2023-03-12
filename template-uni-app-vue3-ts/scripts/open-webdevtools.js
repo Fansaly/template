@@ -50,14 +50,19 @@ const mergePaths = (filePath) => {
   if (fileExists(filePath)) {
     const content = fs.readFileSync(filePath, { encoding: 'utf8' });
 
-    let webdevtoolsWechatMacOS = content.match(/WEBDEVTOOLS_WECHAT_MACOS=(.*)/)[1];
-    if (webdevtoolsWechatMacOS) {
-      webdevtoolsWechatMacOS = webdevtoolsWechatMacOS.replace(/\\/g, '');
+    let matchResult;
+    matchResult = content.match(/WEBDEVTOOLS_WECHAT_MACOS=(.*)/);
+    if (matchResult && matchResult[1]) {
+      macOS.unshift(matchResult[1].replace(/\\/g, ''));
     }
-    const webdevtoolsWechatWindows = content.match(/WEBDEVTOOLS_WECHAT_WINDOWS=(.*)/)[1];
 
-    macOS = [...new Set([webdevtoolsWechatMacOS, ...macOS])];
-    windows = [...new Set([webdevtoolsWechatWindows, ...windows])];
+    matchResult = content.match(/WEBDEVTOOLS_WECHAT_WINDOWS=(.*)/);
+    if (matchResult && matchResult[1]) {
+      windows.unshift(matchResult[1]);
+    }
+
+    macOS = [...new Set(macOS)];
+    windows = [...new Set(windows)];
   }
 
   return { macOS, windows };

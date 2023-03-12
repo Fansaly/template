@@ -6,7 +6,7 @@
   "scripts": {
     "prepare": "husky install",
     "dev": "pnpm dev:mp-weixin",
-    "open": "scripts/open-webdevtools.js",
+    "open": "node scripts/open-webdevtools.js",
     "check": "pnpm check:lint && pnpm check:prettier && pnpm check:type",
     "check:type": "vue-tsc",
     "check:lint": "eslint . --ext .js,.jsx,.ts,.tsx,.vue --ignore-path ./.eslintignore",

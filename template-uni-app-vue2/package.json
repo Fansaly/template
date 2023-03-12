@@ -6,7 +6,7 @@
   "scripts": {
     "prepare": "husky install",
     "dev": "npm run dev:mp-weixin",
-    "open": "scripts/open-webdevtools.js",
+    "open": "node scripts/open-webdevtools.js",
     "check": "npm run check:lint && npm run check:prettier",
     "check:lint": "eslint . --ext .js,.jsx,.ts,.tsx,.vue --ignore-path ./.eslintignore",
     "check:prettier": "prettier --loglevel warn --debug-check \"./**/*.{js,jsx,ts,tsx,vue,json,css}\"",
